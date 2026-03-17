@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c86f47">
+  <title>Мир шиншилл</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <canvas class="dust-canvas" id="dust-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="На главную">
+      <span class="brand__label">Школьный проект</span>
+      <span class="brand__title">Мир шиншилл</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Навигация по странице">
+      <a href="#top" class="is-active">Главная</a>
+      <a href="#facts">Особенности</a>
+      <a href="#history">История</a>
+      <a href="#care">Уход</a>
+      <a href="#gallery">Галерея</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="top">
+      <div class="hero__copy reveal">
+        <p class="eyebrow">Школьная работа на HTML, CSS и JavaScript</p>
+        <h1>Мир шиншилл</h1>
+        <p class="hero__lead">
+          Шиншилла - это домашний грызун семейства шиншилловых. Визитной карточкой этого зверька является густой мех, который редко встречается у других грызунов.
+        </p>
+
+        <div class="hero__actions">
+          <a class="button button--primary" href="#facts">Узнать больше</a>
+          <a class="button button--secondary" href="#gallery">Смотреть фото</a>
+        </div>
+
+        <div class="hero__tags">
+          <span>Густой мех</span>
+          <span>Южная Америка</span>
+          <span>Колониальный образ жизни</span>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal" data-parallax-root>
+        <div class="hero__halo" aria-hidden="true"></div>
+
+        <figure class="hero-photo hero-photo--main parallax-layer" data-depth="16">
+          <img src="https://static-algoritmika-su.ngcdn.ru/uploads/2021/01/%D0%94%D0%BB%D1%8F%20%D1%88%D0%B0%D0%BF%D0%BA%D0%B8_0_1611155134.jpg?1611155135" alt="Шиншилла на мягком светлом фоне" loading="eager">
+        </figure>
+
+        <figure class="hero-photo hero-photo--secondary parallax-layer" data-depth="28">
+          <img src="https://static-algoritmika-su.ngcdn.ru/uploads/2021/01/%D0%A8%D0%B8%D0%BD%D1%88%D0%B8%D0%BB%D0%BB%D0%B0%20%D0%B2%20%D0%B3%D0%BE%D1%80%D0%B0%D1%85_0_1611155135.jpg?1611155135" alt="Шиншилла в горах" loading="lazy">
+        </figure>
+
+        <figure class="hero-photo hero-photo--mini parallax-layer" data-depth="34">
+          <img src="https://static-algoritmika-su.ngcdn.ru/uploads/2021/01/%D0%9E%D0%B4%D0%B8%D0%BD%D0%BE%D0%BA%D0%B0%D1%8F%20%D1%88%D0%B8%D0%BD%D1%88%D0%B8%D0%BB%D0%BB%D0%B0_0_1611155135.jpg?1611155135" alt="Одинокая шиншилла" loading="lazy">
+        </figure>
+
+        <article class="hero-note hero-note--top parallax-layer" data-depth="40">
+          <span class="hero-note__label">Среда</span>
+          <strong>Горы Южной Америки</strong>
+        </article>
+
+        <article class="hero-note hero-note--bottom parallax-layer" data-depth="24">
+          <span class="hero-note__label">Факт</span>
+          <strong>Шиншиллы прекрасно приспособлены к жизни в горах.</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="facts">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Особенности</p>
+        <h2>Природа, питание и привычки шиншилл</h2>
+        <p class="section-heading__text">
+          Эти зверьки сочетают в себе горную выносливость, осторожность и очень необычный образ жизни.
+        </p>
+      </div>
+
+      <div class="feature-shell reveal">
+        <figure class="feature-shell__media">
+          <img src="https://static-algoritmika-su.ngcdn.ru/uploads/2021/01/%D0%93%D1%80%D1%83%D0%BF%D0%BF%D0%B0%20%D1%88%D0%B8%D0%BD%D1%88%D0%B8%D0%BB%D0%BB_0_1611155135.jpg?1611155135" alt="Группа шиншилл" loading="lazy">
+        </figure>
+
+        <div class="feature-shell__content">
+          <article class="feature-card">
+            <h3>Среда обитания</h3>
+            <p>
+              Естественная среда обитания шиншилл - горы Южной Америки. В качестве убежищ шиншиллы используют расщелины скал и пустоты под камнями, в случае их отсутствия зверьки выкапывают нору. Шиншиллы прекрасно приспособлены к жизни в горах.
+            </p>
+          </article>
+
+          <article class="feature-card feature-card--accent">
+            <h3>Питание</h3>
+            <p>
+              Шиншиллы ведут колониальный образ жизни; пищей им служат различные травянистые растения, в основном, злаковые, бобовые, а также мхи, лишайники, кактусы, кустарники, кора деревьев, из животной пищи - насекомые.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="history">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Одомашнивание</p>
+        <h2>Как шиншиллы оказались рядом с людьми</h2>
+        <p class="section-heading__text">
+          История разведения шиншилл в неволе началась с долгого поиска и большой настойчивости.
+        </p>
+      </div>
+
+      <div class="history-grid">
+        <article class="history-card reveal">
+          <div class="history-card__year" data-counter="1919">1919</div>
+          <p>
+            Основоположником разведения шиншилл в неволе был американский инженер Матиас Ф. Чапмен. В 1919 году он начал поиск диких шиншилл, которые к тому времени встречались чрезвычайно редко. Он и 23 наёмных охотника за 3 года смогли изловить 11 шиншилл, из которых только три были самками. Ему удалось адаптировать шиншилл к равнинному климату и переправить их в Калифорнию.
+          </p>
+
+          <div class="history-stats">
+            <div class="history-stat">
+              <strong data-counter="23">23</strong>
+              <span>охотника</span>
+            </div>
+            <div class="history-stat">
+              <strong data-counter="11">11</strong>
+              <span>шиншилл</span>
+            </div>
+            <div class="history-stat">
+              <strong data-counter="3">3</strong>
+              <span>самки</span>
+            </div>
+          </div>
+        </article>
+
+        <figure class="history-photo reveal">
+          <img src="https://static-algoritmika-su.ngcdn.ru/uploads/2021/01/%D0%9E%D0%B4%D0%B8%D0%BD%D0%BE%D0%BA%D0%B0%D1%8F%20%D1%88%D0%B8%D0%BD%D1%88%D0%B8%D0%BB%D0%BB%D0%B0_0_1611155135.jpg?1611155135" alt="Шиншилла крупным планом" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="care">
+      <div class="care-panel reveal">
+        <div class="care-panel__content">
+          <p class="eyebrow">Как ухаживать за шиншиллой</p>
+          <h2>Шиншиллам нужен простор, компания и очень много сена</h2>
+          <p>
+            Шиншиллу держат в просторной клетке. В природе животные живут колониями, а значит, заводить лучше не одну, а сразу несколько шиншилл.
+          </p>
+          <p>
+            В рационе шиншиллы обязательно должно быть сено из разных видов трав. Количество сена, которое потребляет шиншилла в день - в два раза больше самой шиншиллы!
+          </p>
+        </div>
+
+        <aside class="care-panel__fact">
+          <span class="care-panel__label">Главный акцент</span>
+          <strong class="care-panel__number" data-counter="2" data-suffix="x">2x</strong>
+          <p>Больше самой шиншиллы может составлять её дневная норма сена.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Галерея</p>
+        <h2>Шиншиллы на фото</h2>
+        <p class="section-heading__text">
+          Все изображения теперь подключаются по ссылке, без хранения в папке проекта.
+        </p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <figure class="gallery-item gallery-item--large">
+          <img src="https://static-algoritmika-su.ngcdn.ru/uploads/2021/01/%D0%94%D0%BB%D1%8F%20%D1%88%D0%B0%D0%BF%D0%BA%D0%B8_0_1611155134.jpg?1611155135" alt="Шиншилла на светлом фоне" loading="lazy">
+          <figcaption>Нежный мех и аккуратная, мягкая внешность</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://static-algoritmika-su.ngcdn.ru/uploads/2021/01/%D0%A8%D0%B8%D0%BD%D1%88%D0%B8%D0%BB%D0%BB%D0%B0%20%D0%B2%20%D0%B3%D0%BE%D1%80%D0%B0%D1%85_0_1611155135.jpg?1611155135" alt="Шиншилла в горной среде" loading="lazy">
+          <figcaption>Естественная горная среда обитания</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://static-algoritmika-su.ngcdn.ru/uploads/2021/01/%D0%9E%D0%B4%D0%B8%D0%BD%D0%BE%D0%BA%D0%B0%D1%8F%20%D1%88%D0%B8%D0%BD%D1%88%D0%B8%D0%BB%D0%BB%D0%B0_0_1611155135.jpg?1611155135" alt="Одинокая шиншилла" loading="lazy">
+          <figcaption>Осторожность и спокойный характер</figcaption>
+        </figure>
+
+        <figure class="gallery-item gallery-item--wide">
+          <img src="https://static-algoritmika-su.ngcdn.ru/uploads/2021/01/%D0%93%D1%80%D1%83%D0%BF%D0%BF%D0%B0%20%D1%88%D0%B8%D0%BD%D1%88%D0%B8%D0%BB%D0%BB_0_1611155135.jpg?1611155135" alt="Несколько шиншилл вместе" loading="lazy">
+          <figcaption>В природе шиншиллы живут колониями, поэтому им важна компания</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Красивый одностраничный сайт о шиншиллах для школьной работы.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
